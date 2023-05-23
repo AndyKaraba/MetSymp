@@ -1,6 +1,6 @@
-Sub TableHd()
+Sub TbHdr()
 '
-' TableHd Macro
+' Table header formatting macro
 '
 
 '	
