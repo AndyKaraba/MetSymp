@@ -5,13 +5,13 @@ Sub TbHdr()
 
 '	
 
-Dim TbHdr As String
+    Dim TbHdr As String
     Dim TbHdrR As Integer
     
     TbHdr = ActiveCell.Value
-    Debug.Print TbHdr
+   ' Debug.Print TbHdr
     TbHdrR = ActiveCell.Row
-    Debug.Print TbHdrR
+   ' Debug.Print TbHdrR
     ActiveCell.FormulaR1C1 = ""
     
     Range(Cells(TbHdrR, 2), Cells(TbHdrR, 7)).Select
