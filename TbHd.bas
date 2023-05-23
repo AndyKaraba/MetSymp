@@ -5,7 +5,7 @@ Sub TbHdr()
 
 '	
 
-Dim TbHdr As String
+    Dim TbHdr As String
     Dim TbHdrR As Integer
     
     TbHdr = ActiveCell.Value
