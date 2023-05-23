@@ -1,0 +1,34 @@
+Sub TableHd()
+'
+' TableHd Macro
+'
+
+'
+    ActiveCell.FormulaR1C1 = ""
+    Range("B35:G35").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.Merge
+    With Selection
+        .HorizontalAlignment = xlLeft
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = True
+    End With
+    ActiveCell.FormulaR1C1 = "4.0.  CALIBRATION RESULTS"
+    Range("A36:H36").Select
+End Sub
