@@ -3,9 +3,18 @@ Sub TableHd()
 ' TableHd Macro
 '
 
-'
+'	
+
+Dim TbHdr As String
+    Dim TbHdrR As Integer
+    
+    TbHdr = ActiveCell.Value
+    Debug.Print TbHdr
+    TbHdrR = ActiveCell.Row
+    Debug.Print TbHdrR
     ActiveCell.FormulaR1C1 = ""
-    Range("B35:G35").Select
+    
+    Range(Cells(TbHdrR, 2), Cells(TbHdrR, 7)).Select
     With Selection
         .HorizontalAlignment = xlCenter
         .VerticalAlignment = xlCenter
@@ -17,6 +26,7 @@ Sub TableHd()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
+    Range(Cells(TbHdrR, 2), Cells(TbHdrR, 7)).Select
     Selection.Merge
     With Selection
         .HorizontalAlignment = xlLeft
@@ -29,6 +39,5 @@ Sub TableHd()
         .ReadingOrder = xlContext
         .MergeCells = True
     End With
-    ActiveCell.FormulaR1C1 = "4.0.  CALIBRATION RESULTS"
-    Range("A36:H36").Select
+    ActiveCell.FormulaR1C1 = TbHdr
 End Sub
